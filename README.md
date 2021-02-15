@@ -7,3 +7,5 @@ NASA SUITS 2021
 For Team Athena NASA SUITS 2020 Repo https://github.com/Romogna/Project-Zoot
 
 Official 2020 NASA SUITS repo: https://github.com/SUITS-teams/TeamAthena
+
+Team Athena Video Repo https://drive.google.com/drive/folders/1YUjRqZ2IPyEUaYzVb49N7jwWNX6Y4pjZ?usp=sharing
