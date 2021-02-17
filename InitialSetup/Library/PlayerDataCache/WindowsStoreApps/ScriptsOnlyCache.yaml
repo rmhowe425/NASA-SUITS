@@ -1,9 +1,16 @@
 ScriptsOnlyBuild:
   usedScripts:
+    Assembly-CSharp.dll:
+    - ToggleButton
     Microsoft.MixedReality.Toolkit.Editor.Inspectors.dll:
     - Microsoft.MixedReality.Toolkit.Editor.MixedRealityCameraProfileInspector
+    - Microsoft.MixedReality.Toolkit.Editor.MixedRealitySpeechCommandsProfileInspector
     - Microsoft.MixedReality.Toolkit.Editor.MixedRealityToolkitConfigurationProfileInspector
-    - Microsoft.MixedReality.Toolkit.SpatialAwareness.Editor.MixedRealitySpatialAwarenessSystemProfileInspector
+    - Microsoft.MixedReality.Toolkit.Input.Editor.MixedRealityInputActionRulesInspector
+    - Microsoft.MixedReality.Toolkit.Input.Editor.MixedRealityInputActionsProfileInspector
+    - Microsoft.MixedReality.Toolkit.Input.Editor.MixedRealityInputSystemProfileInspector
+    - Microsoft.MixedReality.Toolkit.Input.Editor.MixedRealityPointerProfileInspector
+    - Microsoft.MixedReality.Toolkit.Inspectors.MixedRealityHandTrackingProfileInspector
     Microsoft.MixedReality.Toolkit.Editor.Utilities.dll:
     - Microsoft.MixedReality.Toolkit.Utilities.Editor.ProjectPreferences
     Microsoft.MixedReality.Toolkit.Providers.LeapMotion.dll:
@@ -17,13 +24,16 @@ ScriptsOnlyBuild:
     Microsoft.MixedReality.Toolkit.Providers.XRSDK.Oculus.dll:
     - Microsoft.MixedReality.Toolkit.XRSDK.Oculus.Input.OculusXRSDKDeviceManagerProfile
     Microsoft.MixedReality.Toolkit.SDK.dll:
+    - Microsoft.MixedReality.Toolkit.Experimental.RiggedHandVisualizer.RiggedHandVisualizer
     - Microsoft.MixedReality.Toolkit.Input.AnimatedCursor
+    - Microsoft.MixedReality.Toolkit.Input.BaseCursor
     - Microsoft.MixedReality.Toolkit.Input.FingerCursor
     - Microsoft.MixedReality.Toolkit.Input.GGVPointer
     - Microsoft.MixedReality.Toolkit.Input.MeshCursor
     - Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerVisualizer
     - Microsoft.MixedReality.Toolkit.Input.MousePointer
     - Microsoft.MixedReality.Toolkit.Input.PokePointer
+    - Microsoft.MixedReality.Toolkit.Input.ScreenSpaceMousePointer
     - Microsoft.MixedReality.Toolkit.Input.ShellHandRayPointer
     - Microsoft.MixedReality.Toolkit.Input.SpherePointer
     - Microsoft.MixedReality.Toolkit.Input.SpherePointerGrabPoint
@@ -43,6 +53,7 @@ ScriptsOnlyBuild:
     - Microsoft.MixedReality.Toolkit.UI.States
     - Microsoft.MixedReality.Toolkit.UI.Theme
     - Microsoft.MixedReality.Toolkit.Utilities.GridObjectCollection
+    - Microsoft.MixedReality.Toolkit.Utilities.Solvers.HandConstraintPalmUp
     - Microsoft.MixedReality.Toolkit.Utilities.Solvers.Orbital
     - Microsoft.MixedReality.Toolkit.Utilities.Solvers.RadialView
     - Microsoft.MixedReality.Toolkit.Utilities.Solvers.SolverHandler
@@ -51,6 +62,7 @@ ScriptsOnlyBuild:
     Microsoft.MixedReality.Toolkit.Services.InputSimulation.dll:
     - Microsoft.MixedReality.Toolkit.Input.MixedRealityInputSimulationProfile
     Microsoft.MixedReality.Toolkit.Services.InputSystem.dll:
+    - Microsoft.MixedReality.Toolkit.Input.GazeProvider
     - Microsoft.MixedReality.Toolkit.Input.MixedRealityInputModule
     - Microsoft.MixedReality.Toolkit.Input.NearInteractionGrabbable
     - Microsoft.MixedReality.Toolkit.Input.NearInteractionTouchable
@@ -58,6 +70,7 @@ ScriptsOnlyBuild:
     - Microsoft.MixedReality.Toolkit.Boundary.MixedRealityBoundaryVisualizationProfile
     - Microsoft.MixedReality.Toolkit.Diagnostics.MixedRealityDiagnosticsProfile
     - Microsoft.MixedReality.Toolkit.Input.BaseHandVisualizer
+    - Microsoft.MixedReality.Toolkit.Input.HandBounds
     - Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerMappingProfile
     - Microsoft.MixedReality.Toolkit.Input.MixedRealityControllerVisualizationProfile
     - Microsoft.MixedReality.Toolkit.Input.MixedRealityEyeTrackingProfile
@@ -175,6 +188,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11806}
     - Class: 114
+      Script: {instanceID: 11904}
+    - Class: 114
       Script: {instanceID: 11954}
     - Class: 114
       Script: {instanceID: 11992}
@@ -253,49 +268,55 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14108}
     - Class: 114
-      Script: {instanceID: 14128}
+      Script: {instanceID: 14110}
     - Class: 114
-      Script: {instanceID: 14186}
+      Script: {instanceID: 14130}
     - Class: 114
-      Script: {instanceID: 14226}
+      Script: {instanceID: 14188}
     - Class: 114
-      Script: {instanceID: 14246}
+      Script: {instanceID: 14228}
     - Class: 114
-      Script: {instanceID: 14328}
+      Script: {instanceID: 14248}
     - Class: 114
-      Script: {instanceID: 14674}
+      Script: {instanceID: 14330}
     - Class: 114
-      Script: {instanceID: 14680}
+      Script: {instanceID: 14676}
     - Class: 114
-      Script: {instanceID: 14758}
+      Script: {instanceID: 14682}
     - Class: 114
-      Script: {instanceID: 14860}
+      Script: {instanceID: 14760}
     - Class: 114
-      Script: {instanceID: 14908}
+      Script: {instanceID: 14862}
     - Class: 114
-      Script: {instanceID: 14934}
+      Script: {instanceID: 14910}
     - Class: 114
-      Script: {instanceID: 15170}
+      Script: {instanceID: 14936}
     - Class: 114
-      Script: {instanceID: 15176}
+      Script: {instanceID: 14952}
     - Class: 114
-      Script: {instanceID: 15196}
+      Script: {instanceID: 15172}
     - Class: 114
-      Script: {instanceID: 15278}
+      Script: {instanceID: 15178}
     - Class: 114
-      Script: {instanceID: 15416}
+      Script: {instanceID: 15198}
     - Class: 114
-      Script: {instanceID: 15446}
+      Script: {instanceID: 15280}
     - Class: 114
-      Script: {instanceID: 15494}
+      Script: {instanceID: 15418}
     - Class: 114
-      Script: {instanceID: 15600}
+      Script: {instanceID: 15448}
     - Class: 114
-      Script: {instanceID: 15618}
+      Script: {instanceID: 15496}
     - Class: 114
-      Script: {instanceID: 15666}
+      Script: {instanceID: 15522}
     - Class: 114
-      Script: {instanceID: 15750}
+      Script: {instanceID: 15602}
+    - Class: 114
+      Script: {instanceID: 15620}
+    - Class: 114
+      Script: {instanceID: 15668}
+    - Class: 114
+      Script: {instanceID: 15752}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -1573,6 +1594,12 @@ ScriptsOnlyBuild:
     className: MixedRealitySpeechCommandsProfile
   - hash:
       serializedVersion: 2
+      Hash: 82504cb040e02d197cf13db867766fa1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ToggleButton
+  - hash:
+      serializedVersion: 2
       Hash: 1a076f433a96cd88dd7793bd62f960b2
     assemblyName: Microsoft.MixedReality.Toolkit.SDK.dll
     namespaceName: Microsoft.MixedReality.Toolkit.UI
@@ -2321,6 +2348,618 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: fbda10479cabf31a62e4e1f2cfb3a760
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples
+    className: GestureTester
+  - hash:
+      serializedVersion: 2
+      Hash: bd66248b13fd43716ad1b1071459509e
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: ColorTap
+  - hash:
+      serializedVersion: 2
+      Hash: 4d1e5aeadff1a7f7517863829e72db59
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: DrawOnTexture
+  - hash:
+      serializedVersion: 2
+      Hash: 4566e5f236de2060736a23afcb716eae
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos
+    className: BoundsControlRuntimeExample
+  - hash:
+      serializedVersion: 2
+      Hash: 271cac78a1da90a16359b06a27928ecd
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: TriggerOnStartup
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: DoNotRender
+  - hash:
+      serializedVersion: 2
+      Hash: e1e7d88bd8f0defceafa24c0322c346f
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: HitBehaviorDestroyOnSelect
+  - hash:
+      serializedVersion: 2
+      Hash: 663fcc0652ae006595a04f60e05cae23
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos
+    className: HandInteractionTouch
+  - hash:
+      serializedVersion: 2
+      Hash: ac64cfac2f4ca724390e7fbc047689fd
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Experimental.DialogTest
+    className: DialogExampleController
+  - hash:
+      serializedVersion: 2
+      Hash: 0948fc9d6ae03c1fd2c7c0027bdc886b
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos
+    className: HideTapToPlaceLabel
+  - hash:
+      serializedVersion: 2
+      Hash: 3e26aaaaeab21c5c622fb55b5ff63779
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: MoveObjByEyeGaze
+  - hash:
+      serializedVersion: 2
+      Hash: 6c1e1cb6bf90ba0f6acfc41eeb93c99b
+    assemblyName: Microsoft.MixedReality.Toolkit.Demos.InspectorFields.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Utilities.Editor
+    className: InspectorFieldsExample
+  - hash:
+      serializedVersion: 2
+      Hash: 26e803ce8f1b2f15bd3c554dc3f2e7c7
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: TargetGroupCreatorRadial
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Experimental.SurfacePulse
+    className: HideOnDevice
+  - hash:
+      serializedVersion: 2
+      Hash: c993e6b39d9667c29d35c5fdd98c6e4a
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos
+    className: DebugTextOutput
+  - hash:
+      serializedVersion: 2
+      Hash: 97ab8e8737b5efe2ac53cbb0a014a1a0
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: SpeechVisualFeedback
+  - hash:
+      serializedVersion: 2
+      Hash: e0aab1c6d887026b1fa42456c175d49b
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos
+    className: ScrollableListPopulator
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos
+    className: LaunchUri
+  - hash:
+      serializedVersion: 2
+      Hash: 072165f6a6a3ec673cef82c2ab9cc760
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.StandardShader
+    className: MaterialMatrix
+  - hash:
+      serializedVersion: 2
+      Hash: 64985c3a21feecad10489d0537b6f67e
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: ScrollRectTransf
+  - hash:
+      serializedVersion: 2
+      Hash: a4bd41db91c0a0423177d3880ebbbe51
+    assemblyName: Microsoft.MixedReality.Toolkit.Demos.Gltf.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.Gltf
+    className: TestGltfLoading
+  - hash:
+      serializedVersion: 2
+      Hash: 883d1126cb637f93caf30678657c3d07
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.Logging
+    className: InputPointerVisualizer
+  - hash:
+      serializedVersion: 2
+      Hash: 9ebf30558a876e80abb14623c78db2cb
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: OnLookAtRotateByEyeGaze
+  - hash:
+      serializedVersion: 2
+      Hash: c993e6b39d9667c29d35c5fdd98c6e4a
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos
+    className: ShowSliderValue
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: AudioFeedbackPlayer
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos
+    className: ClearSpatialObservations
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos
+    className: LeapCoreAssetsDetector
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.Logging
+    className: LogStructureEyeGaze
+  - hash:
+      serializedVersion: 2
+      Hash: 3fa242c2d538759066262ec1d574de1c
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos
+    className: SliderLunarLander
+  - hash:
+      serializedVersion: 2
+      Hash: dbd36681d2000ab7e2e6bcc3f5f19eab
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: PanZoomRectTransf
+  - hash:
+      serializedVersion: 2
+      Hash: 07a93b68941b766b305bf5fbcf77f41f
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos
+    className: GridObjectLayoutControl
+  - hash:
+      serializedVersion: 2
+      Hash: 4cf2bbd18b7febef821e776bff72b4dc
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: TargetMoveToCamera
+  - hash:
+      serializedVersion: 2
+      Hash: 5e6feb5cf1c85cdf16996bfb3ad7684b
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.Logging
+    className: UserInputRecorder
+  - hash:
+      serializedVersion: 2
+      Hash: af3d057d8910754f614083343f2c59e1
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: PanZoomBaseTexture
+  - hash:
+      serializedVersion: 2
+      Hash: 1be2719b9c6829caef49890a01ee90df
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos
+    className: TetheredPlacement
+  - hash:
+      serializedVersion: 2
+      Hash: 3275ca04daeb0dcfd44b12fe85576315
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos
+    className: ReturnToBounds
+  - hash:
+      serializedVersion: 2
+      Hash: 16d63a7e672618812e361800b3a273b0
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: ParticleHeatmap
+  - hash:
+      serializedVersion: 2
+      Hash: 52a7dde3b4962b24ec1f67c7509be264
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: MoveWithCamera
+  - hash:
+      serializedVersion: 2
+      Hash: 14e01c95e69a332f3e44bbea1b868a71
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos
+    className: BoundaryVisualizationDemo
+  - hash:
+      serializedVersion: 2
+      Hash: ac40c7977181e0eec0fdd31d45dd4394
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos
+    className: Rotator
+  - hash:
+      serializedVersion: 2
+      Hash: 55be26cfda957853e22c13d5fcae2880
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: DwellSelection
+  - hash:
+      serializedVersion: 2
+      Hash: daba20037994367245375906a905a4f8
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos
+    className: ColorChanger
+  - hash:
+      serializedVersion: 2
+      Hash: 4c7b1ffd6a3fe280c224357982784c49
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos
+    className: ProgressIndicatorDemo
+  - hash:
+      serializedVersion: 2
+      Hash: d165228985fb27863dd882ab50a15a33
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos
+    className: ChangeManipulation
+  - hash:
+      serializedVersion: 2
+      Hash: 975c3c81503728d2cdac2ca2309213d9
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: GrabReleaseDetector
+  - hash:
+      serializedVersion: 2
+      Hash: ad3f9f8452334bb3ba24cc8186bf392d
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos
+    className: ToggleBoundingBox
+  - hash:
+      serializedVersion: 2
+      Hash: 1988db9d21bf606401e3a65d780843bb
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Experimental.Dwell
+    className: DwellProfileWithDecay
+  - hash:
+      serializedVersion: 2
+      Hash: 41d657cc5227e2371b2930bf141aaf1b
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Experimental.Dwell
+    className: ToggleDwellSample
+  - hash:
+      serializedVersion: 2
+      Hash: d5669e7ffa968f632185171f8a5f8853
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: FollowEyeGazeGazeProvider
+  - hash:
+      serializedVersion: 2
+      Hash: 49de0af73932dadf622ee01034d9ad0e
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.Logging
+    className: UserInputRecorderUIController
+  - hash:
+      serializedVersion: 2
+      Hash: 28866ac07a8484553ab8b0fbbfa22ed5
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Experimental.UI
+    className: KeyboardTest
+  - hash:
+      serializedVersion: 2
+      Hash: bd462d0f5ffe5a17d9e2bc371b84cac3
+    assemblyName: Microsoft.MixedReality.Toolkit.Demos.Gltf.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.Gltf
+    className: TestGlbLoading
+  - hash:
+      serializedVersion: 2
+      Hash: 7916452f9ef9579fda1c2deeb7927800
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples
+    className: GrabTouchExample
+  - hash:
+      serializedVersion: 2
+      Hash: decd93a96659de3f4c40f96cbc133662
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: ChangeSize
+  - hash:
+      serializedVersion: 2
+      Hash: e0f15c682faa2adb13722f1e830f28be
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos
+    className: MixedRealityCapabilityDemo
+  - hash:
+      serializedVersion: 2
+      Hash: 5ca587b5d57ebdb33f631b2587149975
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: ScrollTexture
+  - hash:
+      serializedVersion: 2
+      Hash: 148cd3062904086e731796515190ca4c
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Experimental.Dwell
+    className: ListItemDwell
+  - hash:
+      serializedVersion: 2
+      Hash: 4e3b88cb6f4ab40d80352ec96b5d6906
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Experimental.Demos
+    className: WidgetElasticDemo
+  - hash:
+      serializedVersion: 2
+      Hash: 994dda8aef6285cfc8693da6bef8d0f0
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos
+    className: LoFiFilterSelection
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos
+    className: ToggleSpatialMeshVisualization
+  - hash:
+      serializedVersion: 2
+      Hash: a4f60cfdb0cb5d0e545d9ed11665bf13
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.Logging
+    className: UserInputPlayback
+  - hash:
+      serializedVersion: 2
+      Hash: 7ba0b307e6bd548497c3d65010128e0f
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: RotateWithConstSpeedDir
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: KeepThisAlive
+  - hash:
+      serializedVersion: 2
+      Hash: e1c5680280c05e20102a3478ff82a653
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos
+    className: SliderChangeColor
+  - hash:
+      serializedVersion: 2
+      Hash: bb8bf1399c8e0e6161a1cb4cdff11893
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Experimental.Joystick
+    className: JoystickSliders
+  - hash:
+      serializedVersion: 2
+      Hash: 8a67fcaebcaf13562489e587977a5a65
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: LoadAdditiveScene
+  - hash:
+      serializedVersion: 2
+      Hash: 6a1ae27562b64f84d4a314e8e44c0220
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: TransportToRespawnLocation
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos
+    className: DemoSpatialMeshHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 4d2c251840cdfd261809293c4d7249f7
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.Logging
+    className: UserInputRecorderFeedback
+  - hash:
+      serializedVersion: 2
+      Hash: bcf5258186ff4d744b1ea78dffe5a421
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos
+    className: SystemKeyboardExample
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: SnapTo
+  - hash:
+      serializedVersion: 2
+      Hash: cef0ef484972467d2833805cf46dde47
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: PanZoomBaseRectTransf
+  - hash:
+      serializedVersion: 2
+      Hash: 4566e5f236de2060736a23afcb716eae
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos
+    className: BoundingBoxExampleTest
+  - hash:
+      serializedVersion: 2
+      Hash: c76a51cac15b2708dbfad065c20d555c
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: OnLoadStartScene
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.Logging
+    className: LogStructure
+  - hash:
+      serializedVersion: 2
+      Hash: bbc46525001959f8de5e90b15e8587bc
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Experimental.HandMenu
+    className: UpdateSliderTrackLine
+  - hash:
+      serializedVersion: 2
+      Hash: 3e1e6ac3ed4d1d940c09392690ee2717
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Experimental.Dwell
+    className: InstantDwellSample
+  - hash:
+      serializedVersion: 2
+      Hash: 293e9ef74be944907e830a07f9fbc04a
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: TargetGroupIterator
+  - hash:
+      serializedVersion: 2
+      Hash: 1b0237717d64e5d62ceeb211f3aa68ba
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos
+    className: PrimaryPointerHandlerExample
+  - hash:
+      serializedVersion: 2
+      Hash: 12039e9598d3caa4b569278724bd9666
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples
+    className: RotateWithPan
+  - hash:
+      serializedVersion: 2
+      Hash: 84d9892d55787a91a058a358d3652f30
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking.Targeting
+    className: OnLookAtShowHoverFeedback
+  - hash:
+      serializedVersion: 2
+      Hash: 9a5bbe26321e87174a41a2c16597a11a
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: ToggleGameObject
+  - hash:
+      serializedVersion: 2
+      Hash: d0f31ea0f80638ee06f15ea78f7a005e
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos
+    className: InputDataExampleGizmo
+  - hash:
+      serializedVersion: 2
+      Hash: 952dbaa980d059b2ea218cb83fdd4af1
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos
+    className: DemoTouchButton
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos
+    className: ToggleGazeSource
+  - hash:
+      serializedVersion: 2
+      Hash: a1dd2398b00749109bee3b1a27ad07b3
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: BlendOut
+  - hash:
+      serializedVersion: 2
+      Hash: e27c3eb212b4a3c985816f8734c43e37
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos
+    className: SpawnOnPointerEvent
+  - hash:
+      serializedVersion: 2
+      Hash: f649cc4323913a97b7ea97987a973772
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: PanZoomTexture
+  - hash:
+      serializedVersion: 2
+      Hash: 6b79c73185865089dc9625e26d9c100a
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: LoadProfilesOnStartup
+  - hash:
+      serializedVersion: 2
+      Hash: 780cc8db316dcf67aac7597a50c9b8ae
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos
+    className: DisablePointersExample
+  - hash:
+      serializedVersion: 2
+      Hash: 2631efe29d7a33bce820c134c40e2abb
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: EyeCalibrationChecker
+  - hash:
+      serializedVersion: 2
+      Hash: 5cee306e02897b76c6ff32be50cd821c
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: OnSelectVisualizerInputController
+  - hash:
+      serializedVersion: 2
+      Hash: 8dbde218bf4a5f5df72b0c8e7755ed69
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: FaceUser
+  - hash:
+      serializedVersion: 2
+      Hash: 814b219c668dbc4e8a6ae32b51bcbd96
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: StatusText
+  - hash:
+      serializedVersion: 2
+      Hash: 2e5863471ce1272c31d41bcaed727a0d
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: TriggerZonePlaceObjsWithin
+  - hash:
+      serializedVersion: 2
+      Hash: ebba10396e38de3a3d0c1f9f75994328
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos
+    className: InputDataExample
+  - hash:
+      serializedVersion: 2
+      Hash: e887dc8c39d14eab75d96f2965a2b7a7
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Experimental.Dwell
+    className: CustomDwellHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: KeepFacingCamera
+  - hash:
+      serializedVersion: 2
+      Hash: 98835a21d6892ae3ee65d7b91d8132e9
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos
+    className: ScrollablePagination
+  - hash:
+      serializedVersion: 2
+      Hash: f42e054dc28b2cc9d4057ff5a8b40a7b
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos
+    className: HandInteractionTouchRotate
+  - hash:
+      serializedVersion: 2
+      Hash: 21a585d2fee877d10b336d8290111ef7
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos
+    className: SolverExampleManager
+  - hash:
+      serializedVersion: 2
+      Hash: d5669e7ffa968f632185171f8a5f8853
+    assemblyName: Microsoft.MixedReality.Toolkit.Examples.dll
+    namespaceName: Microsoft.MixedReality.Toolkit.Examples.Demos.EyeTracking
+    className: FollowEyeGaze
   platform: 21
   scenePathNames:
   - Assets/Scenes/UI_solvers.unity
