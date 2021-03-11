@@ -20,13 +20,23 @@ public class NewBehaviourScript : MonoBehaviour
     public GameObject pan;
     public GameObject ban;
     public GameObject sla;
+    public GameObject emergency_sla;
     public GameObject blk;
+    public GameObject emergency_s;
+    //green
+    public Material material0;
+    //red
     public Material material1;
+    //yellow
+    public Material material2;
+    
     public Text counttext ;
 
     void Start()
     {
-       
+
+        blk.GetComponent<MeshRenderer>().material = material0;
+        emergency_s.GetComponent<MeshRenderer>().material = material1;
 
     }
 
@@ -35,7 +45,8 @@ public class NewBehaviourScript : MonoBehaviour
     void Update()
     {
         //btext.text = "update";
-        StartCoroutine(GetRequest("http://google.com"));
+        
+        StartCoroutine(GetRequest("http://45.37.165.34:3000/api/simulation/state"));
     }
 
     // Update is called once per frame
@@ -85,11 +96,23 @@ public class NewBehaviourScript : MonoBehaviour
     {
         // ren = sla.GetComponent.<Renderer>();
         //sla.GetComponent.< Renderer > () = null;
-        blk.GetComponent<MeshRenderer>().material = material1;
+        blk.GetComponent<MeshRenderer>().material = material2;
         btext.text = "voice on Ccolor!!!!!";
     }
 
+    public void warning()
+    {
 
+        emergency_sla.GetComponent<MeshRenderer>().material = material2;
+        btext.text = "warning!!!!!";
+    }
+
+    public void emergency()
+    {
+
+        emergency_sla.GetComponent<MeshRenderer>().material = material1;
+        btext.text = "emergency!!!!!";
+    }
 
     IEnumerator GetRequest(string uri)
     {
