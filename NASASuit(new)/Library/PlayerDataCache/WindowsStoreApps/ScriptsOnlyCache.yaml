@@ -36,9 +36,12 @@ ScriptsOnlyBuild:
     - Microsoft.MixedReality.Toolkit.UI.InputRecordingControls
     - Microsoft.MixedReality.Toolkit.UI.Interactable
     - Microsoft.MixedReality.Toolkit.UI.ObjectManipulator
+    - Microsoft.MixedReality.Toolkit.UI.PinchSlider
     - Microsoft.MixedReality.Toolkit.UI.PointerBehaviorControls
+    - Microsoft.MixedReality.Toolkit.UI.PressableButton
     - Microsoft.MixedReality.Toolkit.UI.PressableButtonHoloLens2
     - Microsoft.MixedReality.Toolkit.UI.RotationAxisConstraint
+    - Microsoft.MixedReality.Toolkit.UI.SliderSounds
     - Microsoft.MixedReality.Toolkit.UI.SpeechConfirmationTooltip
     - Microsoft.MixedReality.Toolkit.UI.States
     - Microsoft.MixedReality.Toolkit.UI.Theme
@@ -104,6 +107,7 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshPro
+    - TMPro.TextMeshProUGUI
     Unity.XR.Management.Editor.dll:
     - UnityEditor.XR.Management.XRGeneralSettingsPerBuildTarget
     Unity.XR.Management.dll:
@@ -158,6 +162,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 95
       Script: {instanceID: 0}
+    - Class: 102
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
@@ -182,6 +188,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 11480}
     - Class: 114
       Script: {instanceID: 11492}
+    - Class: 114
+      Script: {instanceID: 11530}
     - Class: 114
       Script: {instanceID: 11534}
     - Class: 114
@@ -247,6 +255,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12722}
     - Class: 114
+      Script: {instanceID: 12884}
+    - Class: 114
       Script: {instanceID: 12914}
     - Class: 114
       Script: {instanceID: 12994}
@@ -283,6 +293,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13718}
     - Class: 114
+      Script: {instanceID: 13720}
+    - Class: 114
       Script: {instanceID: 13748}
     - Class: 114
       Script: {instanceID: 13878}
@@ -304,6 +316,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14102}
     - Class: 114
       Script: {instanceID: 14354}
+    - Class: 114
+      Script: {instanceID: 14434}
     - Class: 114
       Script: {instanceID: 14438}
     - Class: 114
@@ -1453,7 +1467,7 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
-      Hash: 25c1bb02cbddee7fc1a4bb79364a9619
+      Hash: 178208c9bb10b9122da6adaa0ce98114
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: NewBehaviourScript
@@ -2306,4 +2320,4 @@ ScriptsOnlyBuild:
   platform: 21
   scenePathNames:
   - Assets/Scenes/GettingStarted.unity
-  playerPath: C:/Users/CADD_STUDENT/Desktop/SUITS_REPO/Builds/DestinationMenu
+  playerPath: C:/Users/CADD_STUDENT/Desktop/SUITS_REPO/Builds/SDR_test
