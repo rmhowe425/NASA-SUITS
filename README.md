@@ -1,7 +1,10 @@
+NASA SUITS 2021
+
 HCI Design Features (Update and Refer to this document when working in Unity)
 https://docs.google.com/document/d/1hm78ST1y3jnAAilaoJ_59wLCeMWilPN7B7jcoK-_kzU/edit?usp=sharing
 
-NASA SUITS 2021
+Geology Science Sampling Instructions
+https://docs.google.com/document/d/1ObdsN98MO9Tc6ZLfBPn7oBl401Z6jXctkYodc5Bs2K0/edit
 
 Software Design Review Google Slides https://docs.google.com/presentation/d/1OJhEDqhPNrrseJNpeTBpD2QTtDqhCoFH/edit#slide=id.p1
 
