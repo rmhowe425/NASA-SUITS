@@ -49,9 +49,9 @@ public class MyTcpClient : MonoBehaviour
     public Text WalkBackTimerUI;
 
     // Camera Transformation
-    //public Transform playerTransform;
-    //public Transform compassTransform;
-    //Vector3 direct;
+    public Transform playerTransform;
+    public Transform compassTransform;
+    Vector3 direct;
 
 
     public void Start()
@@ -159,10 +159,11 @@ public class MyTcpClient : MonoBehaviour
     public void Update()
     {
 
-        //direct.z = playerTransform.eulerAngles.y;
+        direct.z = playerTransform.eulerAngles.y;
 
-        //compassTransform.transform.rotation = Quaternion.Euler(0, -Input.compass.trueHeading, 0);
-        Test_text.text = "Heading: " + Input.compass.trueHeading;
+        compassTransform.transform.rotation = Quaternion.Euler(0,0,direct.z);
+        //Test_text.text = "Heading: " + Input.compass.trueHeading;
+
         if (lastPacket != null)
         {
             //ReportDataToTrackingManager(lastPacket);
