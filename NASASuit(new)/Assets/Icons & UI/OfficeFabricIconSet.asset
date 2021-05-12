@@ -10,9 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb41c8335e2ca96449f3991db5fa5702, type: 3}
-  m_Name: IconSet
+  m_Name: OfficeFabricIconSet
   m_EditorClassIdentifier: 
-  quadIcons: []
+  quadIcons:
+  - {fileID: 2800000, guid: 1be7614d7de0d444aa02220024adca15, type: 3}
+  - {fileID: 2800000, guid: f2128ce6a0d8b944192b9379d1b490c4, type: 3}
+  - {fileID: 2800000, guid: 907391ffc6a15524aa35991a845deb6f, type: 3}
+  - {fileID: 2800000, guid: 5e96dcf1ce98dcc44990d3b6d4aeca52, type: 3}
+  - {fileID: 2800000, guid: 671e6d924e325c5479820cb4bc6c7a20, type: 3}
+  - {fileID: 2800000, guid: 2274d7fd41d7de54c8054d05cf43d39c, type: 3}
+  - {fileID: 2800000, guid: 9b012ceead78c5b48b0e53e4621c7ffc, type: 3}
+  - {fileID: 2800000, guid: 05b386ea06a1082408e13b38225b7af9, type: 3}
+  - {fileID: 2800000, guid: 2dd2b58f63d8ef24395f57c89c130719, type: 3}
+  - {fileID: 2800000, guid: ac78124681084c14a90d93597a298266, type: 3}
+  - {fileID: 2800000, guid: 2f8bdb33d82f01d458226e59ea042101, type: 3}
   spriteIcons: []
   charIconFont: {fileID: 0}
   charIcons:
