@@ -42,6 +42,8 @@ public class MyTcpClient : MonoBehaviour
     public TextMeshPro gps_lat;
     public TextMeshPro gps_lon;
     public TextMeshPro gps_head;
+    public TextMeshPro front_lux;
+    public TextMeshPro aft_lux;
     string[] gps_data = null;
 
     public Text DistanceToTargetUI;
@@ -181,9 +183,9 @@ public class MyTcpClient : MonoBehaviour
                 gps_lat.text = gps_data[2];
                 gps_lon.text = gps_data[3];
                 gps_head.text = gps_data[4];
-                //lux_value.text = gps_data[5]
-
-                //Debug.Log("Read Magnetom " + IMU_data. );
+                front_lux.text = gps_data[5];
+                aft_lux.text = gps_data[6];
+                Test_text.text = "Lux value: " + gps_data[5];
 
                 double targetLat = 35.29353400;
                 double targetLon = -106.71694150;
@@ -230,8 +232,8 @@ public class MyTcpClient : MonoBehaviour
             if (writer == null || reader == null) continue;
             exchanging = true;
 
-            writer.Write("X\n");
-            Debug.Log("Sent data!");
+            writer.Write("Start\n");
+            //Debug.Log("Sent data!");
 
             string received = null;
 
