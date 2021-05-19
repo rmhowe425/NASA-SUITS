@@ -40,3 +40,6 @@ sudo gpsd /dev/ttyUSB0 -F /var/run/gpsd.sock
 Command to use script:
 
 python3 gps_server_tcp.py
+
+git archive --remote=ssh://host/pathto/repo.git HEAD README.md
+
