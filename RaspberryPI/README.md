@@ -41,5 +41,5 @@ Command to use script:
 
 python3 gps_server_tcp.py
 
-git archive --remote=ssh://host/pathto/repo.git HEAD README.md
+git archive --remote=ssh://github.com/rmhowe425/NASA-SUITS-2021.git HEAD README.md
 
