@@ -22,6 +22,7 @@ sudo apt-get install gpsd gpsd-clients
 Disable default gpsd
 
 sudo systemctl stop gpsd.socket
+
 sudo systemctl disable gpsd.socket
 
 
