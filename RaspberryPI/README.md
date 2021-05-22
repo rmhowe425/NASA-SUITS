@@ -34,5 +34,8 @@ sudo gpsd /dev/ttyUSB0 -F /var/run/gpsd.sock
 
 python3 gps_server_tcp.py
 
+**Open second Command Line Window**
+cgps -s
+
 git archive --remote=ssh://github.com/rmhowe425/NASA-SUITS-2021.git HEAD README.md
 
