@@ -34,7 +34,7 @@ sudo gpsd /dev/ttyUSB0 -F /var/run/gpsd.sock
 
 python3 gps_server_tcp.py
 
-**Open second Command Line Window and run this command to get GPS data**
+**To show GPS data, open second command prompt and run this command**
 
 cgps -s
 
