@@ -42,3 +42,8 @@ cgps -s
 
 git archive --remote=ssh://github.com/rmhowe425/NASA-SUITS-2021.git HEAD README.md
 
+
+## This is the section Navigation Instructions ##
+
+Add Lat/Lon to HoloLens script "my tcp client" on ~lines 60-65 
+
