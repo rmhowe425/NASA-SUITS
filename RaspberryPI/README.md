@@ -1,4 +1,4 @@
-##This is the section for python script used to relay sensor data to the Hololens 2##
+## This is the section for python script used to relay sensor data to the Hololens 2 ##
 
 **Setting up PI:**
 
