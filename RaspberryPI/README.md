@@ -10,17 +10,17 @@ sudo apt install python3-pip
 
 https://learn.adafruit.com/adafruit-ultimate-gps-on-the-raspberry-pi/using-uart-instead-of-usb
 
-**Install GPS daemon (gpsd)**
+**Install GPS daemon (gpsd):**
 
 sudo apt-get install gpsd gpsd-clients
 
-**Disable default gpsd**
+**Disable default gpsd:**
 
 sudo systemctl stop gpsd.socket
 
 sudo systemctl disable gpsd.socket
 
-***Run these before gps data can be received on UART***
+***Run these before gps data can be received on UART:***
 
 sudo killall gpsd
 
@@ -34,9 +34,10 @@ sudo gpsd /dev/ttyUSB0 -F /var/run/gpsd.sock
 
 python3 gps_server_tcp.py
 
-**To show GPS data, open second command prompt and run this command**
+**To show GPS data, open second command prompt and run this command:**
 
 cgps -s
+
 
 
 git archive --remote=ssh://github.com/rmhowe425/NASA-SUITS-2021.git HEAD README.md
