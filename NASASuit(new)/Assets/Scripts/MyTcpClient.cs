@@ -43,26 +43,46 @@ public class MyTcpClient : MonoBehaviour
     public TextMeshPro gps_lon;
     public TextMeshPro gps_head;
     public TextMeshPro front_lux;
-    public TextMeshPro aft_lux;
+    //public TextMeshPro aft_lux;
     string[] gps_data = null;
 
-    public Text DistanceToTargetUI;
-    public Text GpsSpeedUI;
-    public Text WalkBackTimerUI;
+    public TextMeshProUGUI DistanceToTargetUI;
+    public TextMeshProUGUI GpsSpeedUI;
+    public TextMeshProUGUI WalkBackTimerUI;
 
     // Camera Transformation
     public Transform playerTransform;
     public Transform compassTransform;
     Vector3 direct;
+    float currentHeading = 0;
 
+    // Holds the current location of the user
+    double userCurrentLat = 0;
+    double userCurrentLon = 0;
+    TextMeshPro TextToUpdate;
+    public TextMeshProUGUI currentDestination;
+
+    // This is the active point being tracked by the compass and distance to target
+    double targetLat = 35.29353400;
+    double targetLon = -106.71694150;
+
+    // Change this to reflect the geology test site at the location
+    double geologySiteLat = 0;
+    double geologySiteLon = 0;
+
+    // Change this to reflect the lander site at the location
+    double LanderLat = 0;
+    double LanderLon = 0;
+
+    // This represents the lunar rover location (unused in this years challenge)
+    double RoverLat = 0;
+    double RoverLon = 0;
 
     public void Start()
     {
-        //Server ip address and port
-        Connect("192.168.0.122", "9010");
+        //Server ip address and port (set the ip to the PI address)
+        Connect("192.168.4.1", "9010");
     }
-
-
 
     public void Connect(string host, string port)
     {
@@ -160,37 +180,36 @@ public class MyTcpClient : MonoBehaviour
 
     public void Update()
     {
-
-        direct.z = playerTransform.eulerAngles.y;
-
-        compassTransform.transform.rotation = Quaternion.Euler(0,0,direct.z);
-        //Test_text.text = "Heading: " + Input.compass.trueHeading;
+        // Rotates the compass arrow so that it appears 2D
+        direct.y = playerTransform.eulerAngles.y;
+        direct.x = playerTransform.eulerAngles.x;
 
         if (lastPacket != null)
         {
-            //ReportDataToTrackingManager(lastPacket);
-
-            //Test_text.text = "Receiving Data";
-            //Debug.Log("Read packet: " + lastPacket);
             gps_data = lastPacket.Split(',');
 
             if (gps_data[0] != gps_time)
             {
-                // Palm Menu
-                //gps_time = gps_data[0];
+
                 gps_speed.text = gps_data[0]; // kilometers per hour
                 gps_alt.text = gps_data[1];
                 gps_lat.text = gps_data[2];
                 gps_lon.text = gps_data[3];
                 gps_head.text = gps_data[4];
                 front_lux.text = gps_data[5];
-                aft_lux.text = gps_data[6];
-                Test_text.text = "Lux value: " + gps_data[5];
+                //aft_lux.text = gps_data[6];
+                //Test_text.text = "Lux value: " + gps_data[5];
 
-                double targetLat = 35.29353400;
-                double targetLon = -106.71694150;
+                // For the user tab on destinations
+                userCurrentLat = Convert.ToDouble(gps_data[2]);
+                userCurrentLon = Convert.ToDouble(gps_data[3]);
+
+                // last value needs to be changed to adjust for heading
+                currentHeading = float.Parse(gps_data[4]);
+                compassTransform.transform.rotation = Quaternion.Euler(direct.x, direct.y, currentHeading);
 
                 // Head Mounted Display
+                currentDestination.text = TextToUpdate.text;
                 DistanceToTargetUI.text = Convert.ToString(DistanceToTarget(targetLat,targetLon, Convert.ToDouble(gps_lat.text), Convert.ToDouble(gps_lon.text)));
                 //Debug.Log("Haversine: " + DistanceToTargetUI.text);
                 GpsSpeedUI.text = gps_speed.text;
@@ -350,6 +369,37 @@ public class MyTcpClient : MonoBehaviour
     {
         double WB_Timer = speed / distance;
         return WB_Timer;
+    }
+
+    public void SwitchDestination(int DestinationChoice)
+    {
+        switch (DestinationChoice)
+        {
+            case 1:
+                TextToUpdate.text = "Geology Site";
+                targetLat = geologySiteLat;
+                targetLon = geologySiteLon;
+                break;
+            case 2:
+                TextToUpdate.text = "Rover Site";
+                targetLat = RoverLat;
+                targetLon = RoverLon;
+                break;
+            case 3:
+                TextToUpdate.text = "Lander Site";
+                targetLat = LanderLat;
+                targetLon = LanderLon;
+                break;
+            case 4:
+                TextToUpdate.text = "Current Site";
+                targetLat = userCurrentLat;
+                targetLon = userCurrentLon;
+                break;
+            default:
+                break;
+        }
+
+
     }
 
 }
