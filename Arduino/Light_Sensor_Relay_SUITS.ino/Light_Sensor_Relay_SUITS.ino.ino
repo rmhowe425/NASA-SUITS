@@ -21,10 +21,10 @@
 
 // Close the address jumper on the product for addres 0x10.
 #define AL_ADDR_1 0x10
-#define AL_ADDR_2 0x48
+//#define AL_ADDR_2 0x48
 
 SparkFun_Ambient_Light light_1(AL_ADDR_1);
-SparkFun_Ambient_Light light_2(AL_ADDR_2);
+//SparkFun_Ambient_Light light_2(AL_ADDR_2);
 
 // Possible values: .125, .25, 1, 2
 // Both .125 and .25 should be used in most cases except darker rooms.
@@ -67,7 +67,7 @@ void setup(){
   pinMode(RelayControl1_2, OUTPUT);
 
   light_1.begin();
-  light_2.begin();
+  //light_2.begin();
   //if(light.begin())
     //Serial.println("Ready to sense some light!"); 
   //else
@@ -80,8 +80,8 @@ void setup(){
   light_1.setGain(gain);
   light_1.setIntegTime(time1);
 
-  light_2.setGain(gain);
-  light_2.setIntegTime(time1);
+  //light_2.setGain(gain);
+  //light_2.setIntegTime(time1);
 
 
   //Serial.println("Reading settings..."); 
@@ -95,8 +95,8 @@ void setup(){
   // Set both low and high thresholds, they take values in lux.
   light_1.setIntLowThresh(lowThresh);
   light_1.setIntHighThresh(highThresh);
-  light_2.setIntLowThresh(lowThresh);
-  light_2.setIntHighThresh(highThresh);
+  //light_2.setIntLowThresh(lowThresh);
+  //light_2.setIntHighThresh(highThresh);
   
   // Let's check that they were set correctly. 
   // There are some rounding issues inherently in the IC's design so your lux
@@ -112,7 +112,7 @@ void setup(){
   // above the threshold before the interrupt fires! Values include 1, 2, 4 and
   // 8. 
   light_1.setProtect(numbValues);
-  light_2.setProtect(numbValues);
+  //light_2.setProtect(numbValues);
   //Serial.print("Number of values that must fall below/above threshold before interupt occurrs: ");
   int protectVal = light_1.readProtect();
   //Serial.println(protectVal);
@@ -136,13 +136,13 @@ void setup(){
 void loop(){
 
   luxVal_1 = light_1.readLight();
-  luxVal_2 = light_2.readLight();
+  //luxVal_2 = light_2.readLight();
   //Serial.print("Ambient Light Reading: ");
-  //Serial.print(luxVal_1);
+  Serial.print(luxVal_1);
   //Serial.print(",");
   //Serial.println(luxVal_2);
-  message = luxVal_1 + comma + luxVal_2;
-  Serial.println(message);  
+  //message = luxVal_1 + comma + luxVal_2;
+  //Serial.println(message);  
 
   
   //if (Serial.readString())
