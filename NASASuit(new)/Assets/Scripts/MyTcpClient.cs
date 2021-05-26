@@ -46,6 +46,10 @@ public class MyTcpClient : MonoBehaviour
     //public TextMeshPro aft_lux;
     string[] gps_data = null;
 
+    public GameObject NaviPanelUI;
+    public GameObject ArrowUI;
+    public GameObject StopUI;
+
     public TextMeshProUGUI DistanceToTargetUI;
     public TextMeshProUGUI GpsSpeedUI;
     public TextMeshProUGUI WalkBackTimerUI;
@@ -208,13 +212,23 @@ public class MyTcpClient : MonoBehaviour
                 currentHeading = float.Parse(gps_data[4]);
                 compassTransform.transform.rotation = Quaternion.Euler(direct.x, direct.y, currentHeading);
 
+                // Buffer to toggle UI when user reaches destination
+                int bufferDistance = (int)DistanceToTarget(targetLat, targetLon, Convert.ToDouble(gps_lat.text), Convert.ToDouble(gps_lon.text));
+
+                if (bufferDistance < 3)
+                {
+                    toggleNaviPanel(1);
+                }
+                else if (bufferDistance > 5)
+                {
+                    toggleNaviPanel(2);
+                }
+
                 // Head Mounted Display
                 currentDestination.text = TextToUpdate.text;
-                DistanceToTargetUI.text = Convert.ToString(DistanceToTarget(targetLat,targetLon, Convert.ToDouble(gps_lat.text), Convert.ToDouble(gps_lon.text)));
-                //Debug.Log("Haversine: " + DistanceToTargetUI.text);
+                DistanceToTargetUI.text = Convert.ToString(bufferDistance);
                 GpsSpeedUI.text = gps_speed.text;
                 WalkBackTimerUI.text = Convert.ToString(WalkBackTimer_Calculation(Convert.ToDouble(gps_speed.text), Convert.ToDouble(DistanceToTargetUI.text)));
-                //Debug.Log("Timer: " + WalkBackTimerUI.text);
 
             }
 
@@ -398,8 +412,23 @@ public class MyTcpClient : MonoBehaviour
             default:
                 break;
         }
-
-
     }
 
+    public void toggleNaviPanel(int option)
+    {
+
+        switch (option)
+        {
+            case 1:
+                NaviPanelUI.SetActive(false);
+                ArrowUI.SetActive(false);
+                StopUI.SetActive(true);
+                break;
+            case 2:
+                NaviPanelUI.SetActive(true);
+                ArrowUI.SetActive(true);
+                StopUI.SetActive(false);
+                break;
+        }
+    }
 }
