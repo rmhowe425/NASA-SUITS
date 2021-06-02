@@ -1,2 +1,28 @@
 Base path: 'C:/Program Files/Unity/Hub/Editor/2019.4.18f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2019.4.18f1/Editor/Data/PlaybackEngines'
 Cmd: initializeCompiler
+Cmd: preprocess
+  insize=5587 outsize=1779 ok=1
+Cmd: preprocess
+  insize=7523 outsize=1646 ok=1
+Cmd: preprocess
+  insize=1952 outsize=716 ok=1
+Cmd: preprocess
+  insize=3220 outsize=1058 ok=1
+Cmd: preprocess
+  insize=921 outsize=379 ok=1
+Cmd: preprocess
+  insize=5417 outsize=1271 ok=1
+Cmd: preprocess
+  insize=50671 outsize=9674 ok=1
+Cmd: preprocess
+  insize=15510 outsize=3286 ok=1
+Cmd: preprocess
+  insize=6022 outsize=2420 ok=1
+Cmd: preprocess
+  insize=24713 outsize=2879 ok=1
+Cmd: preprocess
+  insize=729 outsize=399 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=39433 outsize=1182 kw=UNITY_PASS_FORWARDBASE _DIRECTIONAL_LIGHT _HOVER_LIGHT _SPECULAR_HIGHLIGHTS pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_HARDWARE_TIER3 UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=39433 outsize=2774 kw=UNITY_PASS_FORWARDBASE _DIRECTIONAL_LIGHT _HOVER_LIGHT _SPECULAR_HIGHLIGHTS pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_HARDWARE_TIER3 UNITY_COLORSPACE_GAMMA UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
