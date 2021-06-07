@@ -67,8 +67,8 @@ public class MyTcpClient : MonoBehaviour
     public TextMeshProUGUI currentDestination;
 
     // This is the active point being tracked by the compass and distance to target
-    double targetLat = 35.29353400;
-    double targetLon = -106.71694150;
+    double targetLat = 35.932145;
+    double targetLon = -78.924748;
 
     // Change this to reflect the geology test site at the location
     double geologySiteLat = 0;
