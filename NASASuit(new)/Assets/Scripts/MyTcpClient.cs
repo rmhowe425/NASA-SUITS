@@ -85,7 +85,7 @@ public class MyTcpClient : MonoBehaviour
     public void Start()
     {
         //Server ip address and port (set the ip to the PI address)
-        Connect("192.168.4.1", "9010");
+        Connect("192.168.0.23", "9010");
     }
 
     public void Connect(string host, string port)
