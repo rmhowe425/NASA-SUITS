@@ -19,7 +19,7 @@ public class NewBehaviourScript : MonoBehaviour
     //public Text btext;
     public GameObject Vpan;
     public GameObject Upan;
-    public GameObject Dpan;
+    //public GameObject Dpan;
     //public GameObject ban;
     //public GameObject sla;
     //public GameObject emergency_sla;
